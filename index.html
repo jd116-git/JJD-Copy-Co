@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JJD Copy Co. - Psychology-Driven Copywriting</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Inter', sans-serif; /* Changed to Inter (sans-serif) */
         }
         /* Custom scrollbar for a cleaner look (optional) */
         ::-webkit-scrollbar {
@@ -24,34 +24,55 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+        .bg-deep-navy {
+            background-color: #0A2463;
+        }
+        .text-deep-gold {
+            color: #B08D57;
+        }
+        .bg-deep-gold {
+            background-color: #B08D57;
+        }
+        .hover\:bg-deep-gold-darker:hover {
+            background-color: #93703c; /* A slightly darker gold for hover */
+        }
+        .hover\:text-deep-gold:hover {
+            color: #B08D57;
+        }
+        .focus\:ring-deep-gold:focus {
+            --tw-ring-color: #B08D57;
+        }
+        .focus\:border-deep-gold:focus {
+            border-color: #B08D57;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-700">JJD Copy Co.</a>
+            <a href="#" class="text-2xl font-bold text-deep-navy">JJD Copy Co.</a>
             <div class="space-x-4">
-                <a href="#home" class="text-slate-600 hover:text-blue-700 transition duration-300">Home</a>
-                <a href="#about" class="text-slate-600 hover:text-blue-700 transition duration-300">About</a>
-                <a href="#services" class="text-slate-600 hover:text-blue-700 transition duration-300">Services</a>
-                <a href="#portfolio" class="text-slate-600 hover:text-blue-700 transition duration-300">Portfolio</a>
-                <a href="#contact" class="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800 transition duration-300">Contact</a>
+                <a href="#home" class="text-slate-600 hover:text-deep-gold transition duration-300">Home</a>
+                <a href="#about" class="text-slate-600 hover:text-deep-gold transition duration-300">About</a>
+                <a href="#services" class="text-slate-600 hover:text-deep-gold transition duration-300">Services</a>
+                <a href="#portfolio" class="text-slate-600 hover:text-deep-gold transition duration-300">Portfolio</a>
+                <a href="#contact" class="bg-deep-gold text-white px-4 py-2 rounded-md hover:bg-deep-gold-darker transition duration-300">Contact</a>
             </div>
         </nav>
     </header>
 
     <main>
 
-        <section id="home" class="min-h-screen bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex items-center justify-center py-20 px-6">
+        <section id="home" class="min-h-screen bg-deep-navy text-white flex items-center justify-center py-20 px-6">
             <div class="text-center max-w-3xl">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                     Words That Work. Revenue That Soars.
                 </h1>
-                <p class="text-lg md:text-xl mb-8 text-indigo-100">
+                <p class="text-lg md:text-xl mb-8 text-slate-300"> {/* Adjusted for better contrast on navy */}
                     Understand Minds, Win Hearts: Copywriting with theory-backed methods that speak directly to your audience's core.
                 </p>
-                <a href="#services" class="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-slate-100 transition duration-300 text-lg">
+                <a href="#services" class="bg-white text-deep-navy font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-slate-100 transition duration-300 text-lg">
                     Discover How
                 </a>
             </div>
@@ -74,19 +95,19 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-12 text-center">The Psychological Edge: Why It Matters for Your Copy</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Deeper Audience Insight</h3>
+                        <h3 class="text-xl font-semibold text-deep-gold mb-3">Deeper Audience Insight</h3>
                         <p class="text-slate-600">Go beyond demographics. I delve into the psychographics – the *why* behind your audience's actions – to craft messages that truly resonate.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Enhanced Persuasion</h3>
+                        <h3 class="text-xl font-semibold text-deep-gold mb-3">Enhanced Persuasion</h3>
                         <p class="text-slate-600">Leverage proven psychological principles ethically to guide your audience towards a positive decision, without relying on hype or pressure.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Stronger Emotional Connection</h3>
+                        <h3 class="text-xl font-semibold text-deep-gold mb-3">Stronger Emotional Connection</h3>
                         <p class="text-slate-600">Build trust and loyalty by speaking to the emotions that drive behavior, creating copy that feels authentic and relatable.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Increased Engagement & Conversion</h3>
+                        <h3 class="text-xl font-semibold text-deep-gold mb-3">Increased Engagement & Conversion</h3>
                         <p class="text-slate-600">When copy understands and addresses the underlying needs of its readers, engagement naturally leads to action.</p>
                     </div>
                 </div>
@@ -101,7 +122,7 @@
                         <p>My journey into copywriting is powered by a lifelong fascination with human behavior. As an undergraduate psychology student, I'm immersed daily in understanding the intricacies of the human mind: what motivates us, how we make decisions, and the subtle cues that influence our actions. I realized that these profound insights have incredible power when applied to how businesses communicate.</p>
                         <p>I see copywriting as more than just words on a page; it's a bridge. It's about translating a business's value into a language that speaks directly to the needs, desires, and even the unstated questions of its audience.</p>
                         <h3 class="text-2xl font-semibold text-slate-700 pt-4">My Approach to Your Success:</h3>
-                        <ul class="list-disc list-inside space-y-2 pl-0 md:pl-4 text-left"> {/* Adjusted pl for better alignment */}
+                        <ul class="list-disc list-inside space-y-2 pl-0 md:pl-4 text-left">
                             <li><strong>A Curious Mind:</strong> Seeking to understand your business, goals, and ideal customer from a psychological perspective.</li>
                             <li><strong>Strategic Thinking:</strong> Every word choice is intentional, backed by an understanding of how it will likely be perceived.</li>
                             <li><strong>A Collaborative Spirit:</strong> Viewing our work as a partnership to create copy that truly reflects your brand.</li>
@@ -117,29 +138,29 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-12 text-center">How I Can Help: Psychology-Backed Copywriting Services</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Website Copy & UX Writing</h3>
+                        <h3 class="text-2xl font-semibold text-deep-gold mb-4">Website Copy & UX Writing</h3>
                         <p class="text-slate-600 mb-3 flex-grow">Crafting clear, intuitive, and persuasive website content that guides visitors seamlessly. We'll look at user flow, cognitive load, and messaging hierarchy.</p>
-                        <p class="text-sm text-blue-600 font-medium">Psychology Angle: Utilizes cognitive ease, choice architecture, trust signals.</p>
+                        <p class="text-sm text-deep-gold font-medium">Psychology Angle: Utilizes cognitive ease, choice architecture, trust signals.</p>
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Email Marketing Campaigns</h3>
+                        <h3 class="text-2xl font-semibold text-deep-gold mb-4">Email Marketing Campaigns</h3>
                         <p class="text-slate-600 mb-3 flex-grow">Developing email copy that nurtures leads, builds relationships, and drives action. From welcome sequences to promotional emails.</p>
-                        <p class="text-sm text-blue-600 font-medium">Psychology Angle: Employs reciprocity, social proof, scarcity (ethically).</p>
+                        <p class="text-sm text-deep-gold font-medium">Psychology Angle: Employs reciprocity, social proof, scarcity (ethically).</p>
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Advertising Copy</h3>
+                        <h3 class="text-2xl font-semibold text-deep-gold mb-4">Advertising Copy</h3>
                         <p class="text-slate-600 mb-3 flex-grow">Creating attention-grabbing and click-worthy ad copy for social media and digital platforms that stops the scroll.</p>
-                        <p class="text-sm text-blue-600 font-medium">Psychology Angle: Leverages attention mechanisms, emotional triggers.</p>
+                        <p class="text-sm text-deep-gold font-medium">Psychology Angle: Leverages attention mechanisms, emotional triggers.</p>
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                        <h3 class="text-2xl font-semibold text-blue-700 mb-4">Landing Page Copy</h3>
+                        <h3 class="text-2xl font-semibold text-deep-gold mb-4">Landing Page Copy</h3>
                         <p class="text-slate-600 mb-3 flex-grow">Designing high-conversion landing pages focused on a single objective, addressing pain points and highlighting benefits.</p>
-                        <p class="text-sm text-blue-600 font-medium">Psychology Angle: Applies AIDA, Cialdini's principles of influence.</p>
+                        <p class="text-sm text-deep-gold font-medium">Psychology Angle: Applies AIDA, Cialdini's principles of influence.</p>
                     </div>
                     </div>
                 <div class="text-center mt-12">
                      <p class="text-lg text-slate-600 mb-4">Don't see exactly what you need? Let's chat.</p>
-                    <a href="#contact" class="bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300 text-lg">
+                    <a href="#contact" class="bg-deep-gold text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-deep-gold-darker transition duration-300 text-lg">
                         Get a Custom Quote
                     </a>
                 </div>
@@ -154,9 +175,9 @@
                 </p>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-slate-50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Spec+Work+1" alt="Portfolio Item 1" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/B08D57/FFFFFF?text=Spec+Work+1" alt="Portfolio Item 1" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-blue-800 mb-2">Spec Work: Landing Page for Mindfulness App</h3>
+                            <h3 class="text-xl font-semibold text-deep-navy mb-2">Spec Work: Landing Page for Mindfulness App</h3>
                             <p class="text-slate-600 text-sm mb-3"><strong>Challenge:</strong> Increase free trial sign-ups for a new mindfulness app targeting busy young professionals.</p>
                             <p class="text-slate-600 text-sm mb-1"><strong>Psychological Approach:</strong></p>
                             <ul class="list-disc list-inside text-slate-600 text-sm space-y-1 pl-4 mb-3">
@@ -170,9 +191,9 @@
                     </div>
 
                     <div class="bg-slate-50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Spec+Work+2" alt="Portfolio Item 2" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/B08D57/FFFFFF?text=Spec+Work+2" alt="Portfolio Item 2" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-blue-800 mb-2">Conceptual Email Sequence: Fitness Challenge</h3>
+                            <h3 class="text-xl font-semibold text-deep-navy mb-2">Conceptual Email Sequence: Fitness Challenge</h3>
                             <p class="text-slate-600 text-sm mb-3"><strong>Challenge:</strong> Onboard and motivate participants for a 30-day fitness challenge.</p>
                             <p class="text-slate-600 text-sm mb-1"><strong>Psychological Approach:</strong></p>
                             <ul class="list-disc list-inside text-slate-600 text-sm space-y-1 pl-4 mb-3">
@@ -185,9 +206,9 @@
                         </div>
                     </div>
                     <div class="bg-slate-50 rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/2563EB/FFFFFF?text=Spec+Work+3" alt="Portfolio Item 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/B08D57/FFFFFF?text=Spec+Work+3" alt="Portfolio Item 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-blue-800 mb-2">Website Homepage Rewrite: Local Bakery</h3>
+                            <h3 class="text-xl font-semibold text-deep-navy mb-2">Website Homepage Rewrite: Local Bakery</h3>
                             <p class="text-slate-600 text-sm mb-3"><strong>Challenge:</strong> Increase online orders and foot traffic for a small local bakery.</p>
                             <p class="text-slate-600 text-sm mb-1"><strong>Psychological Approach:</strong></p>
                             <ul class="list-disc list-inside text-slate-600 text-sm space-y-1 pl-4 mb-3">
@@ -203,44 +224,44 @@
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-24 bg-gradient-to-br from-blue-700 to-indigo-800 text-white px-6">
+        <section id="contact" class="py-16 md:py-24 bg-deep-navy text-white px-6">
             <div class="container mx-auto max-w-2xl text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Create Something Impactful Together</h2>
-                <p class="text-lg text-indigo-100 mb-8">
+                <p class="text-lg text-slate-300 mb-8"> {/* Adjusted for better contrast on navy */}
                     I'm excited to learn about your business and explore how my psychology-driven copywriting approach can help you achieve your goals. Reach out, and let's start the conversation.
                 </p>
                 <form action="#" method="POST" class="space-y-6 bg-white p-8 rounded-lg shadow-2xl text-left text-slate-700">
                     <div>
                         <label for="name" class="block text-sm font-medium text-slate-700">Full Name</label>
                         <input type="text" name="name" id="name" required
-                               class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm">
+                               class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-deep-gold focus:border-deep-gold sm:text-sm">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-slate-700">Email Address</label>
                         <input type="email" name="email" id="email" required
-                               class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm">
+                               class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-deep-gold focus:border-deep-gold sm:text-sm">
                     </div>
                     <div>
                         <label for="subject" class="block text-sm font-medium text-slate-700">Subject / Service Interested In</label>
                         <input type="text" name="subject" id="subject"
-                               class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm">
+                               class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-deep-gold focus:border-deep-gold sm:text-sm">
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-medium text-slate-700">Tell me a bit about your project/needs</label>
                         <textarea name="message" id="message" rows="4" required
-                                  class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"></textarea>
+                                  class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-deep-gold focus:border-deep-gold sm:text-sm"></textarea>
                     </div>
                     <div>
                         <button type="submit"
-                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 transition duration-300">
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-deep-gold hover:bg-deep-gold-darker focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-deep-gold transition duration-300">
                             Send Message
                         </button>
                     </div>
                     <p class="text-xs text-slate-500 text-center">I aim to respond within 24-48 business hours.</p>
                 </form>
                 <div class="mt-10">
-                    <p class="text-indigo-100">Or connect with me on:</p>
-                    <a href="[Your LinkedIn Profile URL]" target="_blank" rel="noopener noreferrer" class="text-indigo-200 hover:text-white underline font-semibold transition duration-300">LinkedIn</a>
+                    <p class="text-slate-300">Or connect with me on:</p> {/* Adjusted for better contrast on navy */}
+                    <a href="[Your LinkedIn Profile URL]" target="_blank" rel="noopener noreferrer" class="text-deep-gold hover:text-yellow-300 underline font-semibold transition duration-300">LinkedIn</a>
                     </div>
             </div>
         </section>
@@ -272,33 +293,29 @@
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
         // Basic form submission handling (prevents actual submission for this demo)
-        // For a real website, you'd use a service like Formspree, Netlify Forms, or a backend script.
         const contactForm = document.querySelector('#contact form');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                // In a real scenario, you would collect form data and send it.
-                // For this demo, we'll just show an alert.
-                // DO NOT use alert() in production. This is just for demonstration.
-                // Instead, show a success message on the page.
                 const successMessage = document.createElement('p');
                 successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-                successMessage.className = 'mt-4 text-center text-green-300'; // Changed to green-300 for better visibility on dark gradient
+                // Style the success message for better visibility on the white form background
+                successMessage.className = 'mt-4 text-center text-green-600 font-semibold'; 
                 
-                // Clear existing success messages before adding a new one
                 const existingMessages = contactForm.querySelectorAll('.form-success-message');
                 existingMessages.forEach(msg => msg.remove());
 
-                successMessage.classList.add('form-success-message'); // Add a class for easy removal
-                // Append inside the form, but maybe better outside or styled differently if form bg is white
-                // Let's append it after the form for clarity in this context
-                // contactForm.appendChild(successMessage); // Original placement
-                contactForm.parentNode.insertBefore(successMessage, contactForm.nextSibling);
+                successMessage.classList.add('form-success-message'); 
+                // Append after the button, inside the form for better context
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                if (submitButton && submitButton.parentNode) {
+                    submitButton.parentNode.insertBefore(successMessage, submitButton.nextSibling.nextSibling); // after the <p> tag
+                } else {
+                     contactForm.appendChild(successMessage); // fallback
+                }
+                
+                contactForm.reset(); 
 
-
-                contactForm.reset(); // Clears the form fields
-
-                // Remove the message after a few seconds
                 setTimeout(() => {
                     successMessage.remove();
                 }, 5000);
