@@ -8,9 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif; /* Changed to Inter (sans-serif) */
+            font-family: 'Inter', sans-serif;
         }
-        /* Custom scrollbar for a cleaner look (optional) */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -25,16 +24,16 @@
             background: #555;
         }
         .bg-deep-navy {
-            background-color: #0A2463; /* Deep Navy Blue */
+            background-color: #0A2463;
         }
         .text-deep-gold {
-            color: #B08D57; /* Deep Gold */
+            color: #B08D57;
         }
         .bg-deep-gold {
-            background-color: #B08D57; /* Deep Gold */
+            background-color: #B08D57;
         }
         .hover\:bg-deep-gold-darker:hover {
-            background-color: #93703c; /* A slightly darker gold for hover */
+            background-color: #93703c;
         }
         .hover\:text-deep-gold:hover {
             color: #B08D57;
@@ -45,14 +44,39 @@
         .focus\:border-deep-gold:focus {
             border-color: #B08D57;
         }
-        /* Ensure content is not obscured by sticky header */
         section {
-            scroll-margin-top: 60px; /* Adjust this value based on your header's height */
+            scroll-margin-top: 60px;
         }
-        @media (min-width: 768px) { /* md breakpoint in Tailwind */
+        @media (min-width: 768px) {
              section {
-                scroll-margin-top: 68px; /* Adjust if header height changes on larger screens */
+                scroll-margin-top: 68px;
             }
+        }
+        /* Styling for the copy icon and message */
+        .copy-icon {
+            cursor: pointer;
+            margin-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .copy-icon svg {
+            width: 20px; /* Adjust size as needed */
+            height: 20px; /* Adjust size as needed */
+            fill: currentColor; /* Use text color for the icon */
+        }
+        .copy-success-message {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 4px 8px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            border-radius: 4px;
+            font-size: 0.875rem; /* text-sm */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .copy-success-message.show {
+            opacity: 1;
         }
     </style>
 </head>
@@ -196,10 +220,14 @@
                     <p>
                         To discuss your project or for any inquiries, please feel free to reach out directly:
                     </p>
-                    <p>
-                        <strong class="text-deep-gold">Email:</strong> <a href="mailto:jdcopysolutions@outlook.com" class="hover:text-yellow-400 underline transition duration-300">jdcopysolutions@outlook.com</a>
-                    </p>
-                    <!-- Phone number paragraph removed -->
+                    <div class="flex items-center justify-center">
+                        <strong class="text-deep-gold">Email:</strong> 
+                        <span id="email-address" class="ml-2">jdcopysolutions@outlook.com</span>
+                        <span id="copy-email-icon" class="copy-icon hover:text-yellow-400" title="Copy email to clipboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13.586 3.586A2 2 0 1117.172 7.17L3.586 20.756l-3.586.01L.01 17.18l13.576-13.594zM17 2a2 2 0 00-2 2v10a2 2 0 002 2h2V2h-2z"/></svg>
+                        </span>
+                        <span id="copy-success-message" class="copy-success-message">Email copied to clipboard!</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -235,7 +263,49 @@
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // JavaScript for form handling has been removed as the form is no longer present.
+        // Copy to clipboard functionality for email
+        const copyEmailIcon = document.getElementById('copy-email-icon');
+        const emailAddressSpan = document.getElementById('email-address');
+        const copySuccessMessage = document.getElementById('copy-success-message');
+
+        if (copyEmailIcon && emailAddressSpan && copySuccessMessage) {
+            copyEmailIcon.addEventListener('click', () => {
+                const emailToCopy = emailAddressSpan.textContent;
+                
+                // Create a temporary textarea element to hold the text
+                const tempTextArea = document.createElement('textarea');
+                tempTextArea.value = emailToCopy;
+                document.body.appendChild(tempTextArea);
+                
+                // Select the text and copy it
+                tempTextArea.select();
+                tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+                
+                try {
+                    document.execCommand('copy');
+                    // Show success message
+                    copySuccessMessage.classList.add('show');
+                    setTimeout(() => {
+                        copySuccessMessage.classList.remove('show');
+                    }, 2000); // Hide message after 2 seconds
+                } catch (err) {
+                    console.error('Failed to copy email: ', err);
+                    // Optionally, provide feedback to the user that copy failed
+                    copySuccessMessage.textContent = 'Failed to copy!';
+                    copySuccessMessage.style.backgroundColor = '#F44336'; // Red for error
+                    copySuccessMessage.classList.add('show');
+                     setTimeout(() => {
+                        copySuccessMessage.classList.remove('show');
+                        // Reset message and color for next attempt
+                        copySuccessMessage.textContent = 'Email copied to clipboard!';
+                        copySuccessMessage.style.backgroundColor = '#4CAF50';
+                    }, 3000);
+                }
+                
+                // Remove the temporary textarea
+                document.body.removeChild(tempTextArea);
+            });
+        }
 
         // Adjust scroll margin dynamically
         function adjustScrollMargin() {
