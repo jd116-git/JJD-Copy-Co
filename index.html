@@ -60,8 +60,8 @@
             vertical-align: middle;
         }
         .copy-icon svg {
-            width: 20px; /* Adjust size as needed */
-            height: 20px; /* Adjust size as needed */
+            width: 18px; /* Adjust size as needed */
+            height: 18px; /* Adjust size as needed */
             fill: currentColor; /* Use text color for the icon */
         }
         .copy-success-message {
@@ -224,7 +224,10 @@
                         <strong class="text-deep-gold">Email:</strong> 
                         <span id="email-address" class="ml-2">jdcopysolutions@outlook.com</span>
                         <span id="copy-email-icon" class="copy-icon hover:text-yellow-400" title="Copy email to clipboard">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13.586 3.586A2 2 0 1117.172 7.17L3.586 20.756l-3.586.01L.01 17.18l13.576-13.594zM17 2a2 2 0 00-2 2v10a2 2 0 002 2h2V2h-2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <!-- Refined SVG Path -->
+                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1z m-1 4H8c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2z"/>
+                            </svg>
                         </span>
                         <span id="copy-success-message" class="copy-success-message">Email copied to clipboard!</span>
                     </div>
@@ -272,37 +275,31 @@
             copyEmailIcon.addEventListener('click', () => {
                 const emailToCopy = emailAddressSpan.textContent;
                 
-                // Create a temporary textarea element to hold the text
                 const tempTextArea = document.createElement('textarea');
                 tempTextArea.value = emailToCopy;
                 document.body.appendChild(tempTextArea);
                 
-                // Select the text and copy it
                 tempTextArea.select();
-                tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+                tempTextArea.setSelectionRange(0, 99999); 
                 
                 try {
                     document.execCommand('copy');
-                    // Show success message
                     copySuccessMessage.classList.add('show');
                     setTimeout(() => {
                         copySuccessMessage.classList.remove('show');
-                    }, 2000); // Hide message after 2 seconds
+                    }, 2000); 
                 } catch (err) {
                     console.error('Failed to copy email: ', err);
-                    // Optionally, provide feedback to the user that copy failed
                     copySuccessMessage.textContent = 'Failed to copy!';
-                    copySuccessMessage.style.backgroundColor = '#F44336'; // Red for error
+                    copySuccessMessage.style.backgroundColor = '#F44336'; 
                     copySuccessMessage.classList.add('show');
                      setTimeout(() => {
                         copySuccessMessage.classList.remove('show');
-                        // Reset message and color for next attempt
                         copySuccessMessage.textContent = 'Email copied to clipboard!';
                         copySuccessMessage.style.backgroundColor = '#4CAF50';
                     }, 3000);
                 }
                 
-                // Remove the temporary textarea
                 document.body.removeChild(tempTextArea);
             });
         }
